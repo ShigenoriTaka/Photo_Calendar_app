@@ -1,4 +1,4 @@
-package com.example.shigenoritakahashi.photo_calendar_app
+package com.example.shigenoritakahashi.photo_calendar_app2
 
 import org.junit.Test
 
