@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.Calendar;
 
 public class Main_Calendar_Java extends AppCompatActivity {
@@ -21,7 +20,7 @@ public class Main_Calendar_Java extends AppCompatActivity {
     }
 
     public void meake_calendar() {
-        calendar_init(2019,2);
+        calendar_init(2019,1);
         //日付を取得
         int month_day = getmonth_day();
         //１日が何曜日を取得する
