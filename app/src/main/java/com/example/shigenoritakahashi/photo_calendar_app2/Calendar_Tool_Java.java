@@ -2,6 +2,8 @@ package com.example.shigenoritakahashi.photo_calendar_app2;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -74,23 +76,34 @@ public class Calendar_Tool_Java extends AppCompatActivity {
         for (int i = 0; i < row; i++) {
 
             LinearLayout row_Lyout = new LinearLayout(this);
-            mainlinerlyout.addView(row_Lyout);
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
+            mainlinerlyout.addView(row_Lyout,param);
+
 
             for (int j = 0 ; j < 7; j++) {
                 day++;
                 String daystring;
                 if (day <= 0) {
-                    daystring = "";
+                    daystring = "0";
                 }else if(day > month_endday){
-                    daystring = "";
+                    daystring = "0";
                 } else if(day >= 1) {
                         daystring = day + "";
                 }else {
-                    daystring = "";
+                    daystring = "0";
                 }
                 TextView textView = new TextView(this);
                 textView.setText(daystring);
-                row_Lyout.addView(textView);
+                textView.setTextSize(20);
+                textView.setGravity(Gravity.CENTER);
+                LinearLayout.LayoutParams param1 = new LinearLayout.LayoutParams(
+                        0,
+                        ViewGroup.LayoutParams.MATCH_PARENT);
+                param1.weight = 1.0f;
+                param1.gravity = Gravity.CENTER;
+                row_Lyout.addView(textView,param1);
             }
         }
 

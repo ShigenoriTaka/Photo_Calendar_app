@@ -68,10 +68,11 @@
             android:layout_marginBottom="524dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
         <TextView
                 android:text="Sun"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no1"
                 android:layout_weight="1"
@@ -80,7 +81,7 @@
                 android:gravity="center"/>
         <TextView
                 android:text="Mon"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no2"
                 android:layout_weight="1"
@@ -88,7 +89,7 @@
                 android:textSize="18sp"/>
         <TextView
                 android:text="Tue"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no3"
                 android:layout_weight="1"
@@ -96,7 +97,7 @@
                 android:gravity="center"/>
         <TextView
                 android:text="Wed"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no4"
                 android:layout_weight="1"
@@ -104,7 +105,7 @@
                 android:gravity="center"/>
         <TextView
                 android:text="Thu"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no5"
                 android:layout_weight="1"
@@ -112,7 +113,7 @@
                 android:gravity="center"/>
         <TextView
                 android:text="Fri"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no6"
                 android:layout_weight="1"
@@ -120,7 +121,7 @@
                 android:gravity="center"/>
         <TextView
                 android:text="Sat"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/week_day_no7"
                 android:layout_weight="1"
@@ -141,9 +142,9 @@
             android:layout_marginRight="8dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
             app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="0.222">
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
