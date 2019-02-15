@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import java.util.Calendar;
 
-public class Main_Calendar_Java extends AppCompatActivity {
+public class Calendar_Tool_Java extends AppCompatActivity {
 
     private Calendar calendar;
     private LinearLayout mainlinerlyout;
+    private App_tool apptool;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,10 +19,21 @@ public class Main_Calendar_Java extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mainlinerlyout = findViewById(R.id.calendarLayout);
         meake_calendar();
+        apptool = new App_tool();
+        apptool.init(
+                (TextView) findViewById(R.id.year_ID),
+                (TextView) findViewById(R.id.month_ID),
+                (TextView)findViewById(R.id.month_day_ID)
+        );
+
+        apptool.Texttool(calendar);
+        apptool.Daychager_start(this, calendar.get(Calendar.DAY_OF_MONTH));
+
     }
 
     public void meake_calendar() {
-        calendar_init(2019,1);
+        calendar = Calendar.getInstance();
+        //calendar_init(2019,1);
         //日付を取得
         int month_day = getmonth_day();
         //１日が何曜日を取得する
@@ -68,7 +81,7 @@ public class Main_Calendar_Java extends AppCompatActivity {
                 String daystring;
                 if (day <= 0) {
                     daystring = "";
-                }else if(day > month_endday ){
+                }else if(day > month_endday){
                     daystring = "";
                 } else if(day >= 1) {
                         daystring = day + "";
@@ -81,5 +94,9 @@ public class Main_Calendar_Java extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void InvalidateScreen() {
+        apptool.InvalidateDay();
     }
 }
