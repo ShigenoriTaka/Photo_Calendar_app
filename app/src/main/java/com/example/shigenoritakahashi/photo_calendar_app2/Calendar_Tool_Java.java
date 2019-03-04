@@ -15,6 +15,7 @@ public class Calendar_Tool_Java extends AppCompatActivity {
     private LinearLayout mainlinerlyout;
     private App_tool apptool;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +72,7 @@ public class Calendar_Tool_Java extends AppCompatActivity {
 
     private void create_C_lyout(int row, int month_stratday, int month_endday) {
 
-        int day = - month_stratday + 1;
+        int day = - month_stratday - 2;
 
         for (int i = 0; i < row; i++) {
 
@@ -86,13 +87,13 @@ public class Calendar_Tool_Java extends AppCompatActivity {
                 day++;
                 String daystring;
                 if (day <= 0) {
-                    daystring = "0";
+                    daystring = "";
                 }else if(day > month_endday){
-                    daystring = "0";
+                    daystring = "";
                 } else if(day >= 1) {
                         daystring = day + "";
                 }else {
-                    daystring = "0";
+                    daystring = "";
                 }
                 TextView textView = new TextView(this);
                 textView.setText(daystring);
@@ -112,4 +113,9 @@ public class Calendar_Tool_Java extends AppCompatActivity {
     public void InvalidateScreen() {
         apptool.InvalidateDay();
     }
+
+
+
+
+
 }
