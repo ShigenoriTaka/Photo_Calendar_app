@@ -1,5 +1,6 @@
 package com.example.shigenoritakahashi.photo_calendar_app2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -36,7 +37,7 @@ public class Calendar_Tool_Java extends AppCompatActivity {
 
     public void meake_calendar() {
         calendar = Calendar.getInstance();
-        //calendar_init(2019,1);
+        calendar_init(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH));
         //日付を取得
         int month_day = getmonth_day();
         //１日が何曜日を取得する
@@ -70,9 +71,13 @@ public class Calendar_Tool_Java extends AppCompatActivity {
         return calendar.get(Calendar.DAY_OF_WEEK);
     }
 
+    public static final int SUNDAY_COLOR       = 0xFFBD1F1F;
+    public static final int SATURDAY_COLOR       = 0xFF3A26D9;
+
+
     private void create_C_lyout(int row, int month_stratday, int month_endday) {
 
-        int day = - month_stratday - 2;
+        int day = - month_stratday + 1;
 
         for (int i = 0; i < row; i++) {
 
@@ -99,6 +104,15 @@ public class Calendar_Tool_Java extends AppCompatActivity {
                 textView.setText(daystring);
                 textView.setTextSize(20);
                 textView.setGravity(Gravity.CENTER);
+
+                if (j == 0) {
+                    textView.setTextColor(SUNDAY_COLOR);
+                }
+
+                if (j == 6) {
+                    textView.setTextColor(SATURDAY_COLOR);
+                }
+
                 LinearLayout.LayoutParams param1 = new LinearLayout.LayoutParams(
                         0,
                         ViewGroup.LayoutParams.MATCH_PARENT);
