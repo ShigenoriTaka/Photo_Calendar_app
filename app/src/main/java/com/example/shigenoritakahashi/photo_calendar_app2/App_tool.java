@@ -43,52 +43,7 @@ public class App_tool {
         return monthNames[month];
     }
 
-    public void Daychager_start(Context context, int day) {
-        Timer timer = new Timer();
-        Daychenge_Task daychenge_task = new Daychenge_Task(context, day, this, timer);
-        timer.scheduleAtFixedRate(daychenge_task,1000,100);
-    }
 
-    public int display_day;
-    public void InvalidateDay() {
-        Text_tool_03.setText("" + display_day);
-        Text_tool_03.invalidate();
-    }
 
-    public class Daychenge_Task extends TimerTask{
-        private Handler handler;
-        private Context context;
-        private float day;
-        private  float tenp_day;
-        private App_tool app_tool;
-        private Timer timer;
-
-        public Daychenge_Task(Context context,float day,App_tool app_tool, Timer timer) {
-            this.context = context;
-            this.app_tool = app_tool;
-            this.day = day;
-            tenp_day = 1;
-            handler = new Handler();
-            this.timer = timer;
-        }
-        @Override
-        public void run() {
-            handler.post(new Runnable() {
-
-                @Override
-                public void run() {
-                    tenp_day++;
-                    app_tool.display_day = (int)tenp_day;
-                    Log.e("avaaaaaaaaaaaaaaaaa","" + tenp_day);
-                    ((Calendar_Tool_Java)context).InvalidateScreen();
-                    if (tenp_day >= day){
-                        timer.cancel();
-                        handler.removeCallbacks(this);
-
-                    }
-                }
-            });
-        }
-    }
 
 }

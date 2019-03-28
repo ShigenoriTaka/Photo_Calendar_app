@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/eventtile"
+            app:layout_constraintTop_toBottomOf="@+id/Starttaime" android:layout_marginBottom="64dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/Starttaime" android:layout_marginTop="62dp"
+            app:layout_constraintEnd_toStartOf="@+id/endtime" android:layout_marginBottom="233dp"
+            app:layout_constraintBottom_toTopOf="@+id/enter" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp" android:layout_marginEnd="59dp" android:layout_marginRight="59dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/endtime" android:layout_marginTop="62dp"
+            app:layout_constraintStart_toEndOf="@+id/Starttaime" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="155dp" app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="131dp"
+            android:layout_marginRight="131dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Memo"
+            android:ems="10"
+            android:id="@+id/editMemo"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/endtime"
+            android:layout_marginEnd="1dp" android:layout_marginRight="1dp" android:layout_marginBottom="432dp"
+            app:layout_constraintEnd_toEndOf="@+id/eventtitle"/>
+    <Button
+            android:text="確定"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/enter" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="89dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="89dp" app:layout_constraintTop_toBottomOf="@+id/Starttaime"
+            android:layout_marginBottom="354dp"/>
+</android.support.constraint.ConstraintLayout>

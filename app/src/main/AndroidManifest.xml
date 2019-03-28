@@ -9,6 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <activity android:name=".Input_Data_activity"/>
         <activity android:name=".Event_Calendar"/>
         <activity android:name=".Calendar_Tool_Java">
             <intent-filter>
