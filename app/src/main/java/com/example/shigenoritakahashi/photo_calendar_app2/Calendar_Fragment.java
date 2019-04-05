@@ -48,6 +48,8 @@ public class Calendar_Fragment extends Fragment {
                 (TextView) view.findViewById(R.id.month_day_ID)
         );
 
+        calendar = Calendar.getInstance();
+        calendar.set(create_YM.y, create_YM.m, calendar.get(Calendar.DAY_OF_MONTH));
         apptool.Texttool(calendar);
 
         return view;
@@ -59,12 +61,17 @@ public class Calendar_Fragment extends Fragment {
         calendar_init(ym.y, ym.m);
         //日付を取得
         int month_day = getmonth_day();
+        //先月の最後の日を取得する
+        int last_month_endday = get_last_month_endday();
+        // 先月を取得してカレンダーがずれたので初期化
+        calendar_init(ym.y, ym.m);
         //１日が何曜日を取得する
         int strat_day = get_C_daystart();
         //カレンダーの横列を取得する
         int calendar_row = get_C_row(strat_day, month_day);
         //上の情報を元にカレンダーレイアウトを作る
-        create_C_lyout(calendar_row, strat_day, month_day);
+        create_C_lyout(calendar_row, strat_day, month_day, last_month_endday);
+
 
 
     }
@@ -81,6 +88,10 @@ public class Calendar_Fragment extends Fragment {
     private int getmonth_day() {
         return calendar.getActualMaximum(Calendar.DATE);
     }
+    private int get_last_month_endday() {
+        calendar.add(Calendar.MONTH, -1);
+        return calendar.getActualMaximum(Calendar.DATE);
+    }
 
     private int get_C_row(int start_day, int monthday) {
         float row = (float) (start_day + monthday) / 7f;
@@ -93,9 +104,11 @@ public class Calendar_Fragment extends Fragment {
 
     public static final int SUNDAY_COLOR = 0xFFBD1F1F;
     public static final int SATURDAY_COLOR = 0xFF3A26D9;
+    public static final int WEEK_DAY = 0xFFFFFFFF;
+    public static final int REMAINDAR_DAY = 0xFF6E6E6E;
 
 
-    private void create_C_lyout(int row, int month_stratday, int month_endday) {
+    private void create_C_lyout(int row, int month_stratday, int month_endday, int last_month_endday) {
 
         int day = - month_stratday + 1;
 
@@ -112,9 +125,9 @@ public class Calendar_Fragment extends Fragment {
                 day++;
                 String daystring;
                 if (day <= 0) {
-                    daystring = "";
+                    daystring = "" + (last_month_endday + day);
                 }else if(day > month_endday){
-                    daystring = "";
+                    daystring = "" + (day - month_endday);
                 } else if(day >= 1) {
                     daystring = day + "";
                 }else {
@@ -131,6 +144,15 @@ public class Calendar_Fragment extends Fragment {
 
                 if (j == 6) {
                     textView.setTextColor(SATURDAY_COLOR);
+                }
+                if ( (j >= 1 ) && (j <= 5)) {
+                    textView.setTextColor(WEEK_DAY);
+                }
+                if (day <= 0) {
+                    textView.setTextColor(REMAINDAR_DAY);
+                }
+                if (day > month_endday) {
+                    textView.setTextColor(REMAINDAR_DAY);
                 }
 
                 LinearLayout.LayoutParams param1 = new LinearLayout.LayoutParams(

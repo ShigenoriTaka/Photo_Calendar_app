@@ -55,37 +55,38 @@
                     android:text="San"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="1"
-                    android:layout_gravity="center_horizontal" android:gravity="center"/>
+                    android:layout_gravity="center_horizontal" android:gravity="center"
+                    android:textColor="@color/colorAccentSun"/>
             <TextView
                     android:text="Mon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@android:color/background_light"/>
             <TextView
                     android:text="Tue"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView9" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@android:color/background_light"/>
             <TextView
                     android:text="Wen"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView7" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@android:color/background_light"/>
             <TextView
                     android:text="Thu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView10" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@android:color/background_light"/>
             <TextView
                     android:text="Fri"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView8" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@android:color/background_light"/>
             <TextView
                     android:text="Sat"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"
-                    android:gravity="center"/>
+                    android:gravity="center" android:textColor="@color/colorAccentSat"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="vertical"

@@ -30,6 +30,7 @@ public class Calendar_Tool_Java extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         Calendar_Fragment_PagerAdapter adapter = new Calendar_Fragment_PagerAdapter(manager);
         viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(12);
 
         findViewById(R.id.click).setOnClickListener(new View.OnClickListener() {
 
@@ -42,6 +43,10 @@ public class Calendar_Tool_Java extends AppCompatActivity {
             }
 
         });
+
+        Test_2 test2 = new Test_2();
+
+        test2.a3();
 
 
 

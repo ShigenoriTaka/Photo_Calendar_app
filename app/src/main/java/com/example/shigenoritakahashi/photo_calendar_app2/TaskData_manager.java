@@ -6,9 +6,14 @@ import java.lang.reflect.Member;
 import java.util.ArrayList;
 
 public class TaskData_manager {
-    public ArrayList<Task_Data> data_List = new ArrayList<Task_Data>();
+
+    public int ID_NO = 0;
+    public ArrayList<Task_Data>  data_List = new ArrayList<Task_Data>();
 
     public void add(Task_Data data){
+
+        data.ID = ID_NO;
+        ID_NO ++;
         data_List.add(data);
     }
 
@@ -20,7 +25,7 @@ public class TaskData_manager {
         Log.e("paypay", "listsize=" + data_List.size());
         String str = "";
         for (int i = 0; i < data_List.size(); i++){
-            str += "title:" + data_List.get(i).Task_title + ":::memo:" + data_List.get(i).Memo + "....";
+            str += "title:" + data_List.get(i).Task_title + data_List.get(i).ID + ":::memo:" + data_List.get(i).Memo + "....";
         }
         Log.e("paypay2", str);
     }

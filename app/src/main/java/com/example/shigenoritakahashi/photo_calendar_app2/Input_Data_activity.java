@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 public class Input_Data_activity extends AppCompatActivity {
     public TaskData_manager taskData_manager = new TaskData_manager();
+    public Task_Data Task_Data_Box;
 
 
     @Override
@@ -23,17 +24,20 @@ public class Input_Data_activity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Task_Data data = new Task_Data();
+
+                if (Task_Data_Box == null) {
+                    Task_Data_Box = new Task_Data();
+                    taskData_manager.add(Task_Data_Box);
+                }
+
 
                 EditText edit = (EditText)findViewById(R.id.eventtile);
                 SpannableStringBuilder sb = (SpannableStringBuilder)edit.getText();
-                data.Task_title = sb.toString();
+                Task_Data_Box.Task_title = sb.toString();
 
                 edit = (EditText)findViewById(R.id.editMemo);
                 sb = (SpannableStringBuilder)edit.getText();
-                data.Memo = sb.toString();
-
-                taskData_manager.add(data);
+                Task_Data_Box.Memo = sb.toString();
 
                 taskData_manager.log();
 
