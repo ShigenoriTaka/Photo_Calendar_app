@@ -44,9 +44,8 @@ public class Calendar_Tool_Java extends AppCompatActivity {
 
         });
 
-        Test_2 test2 = new Test_2();
-
-        test2.a3();
+       Test_03 a02 = new Test_03();
+       a02.a1();
 
 
 

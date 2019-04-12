@@ -40,6 +40,8 @@ public class Input_Data_activity extends AppCompatActivity {
                 Task_Data_Box.Memo = sb.toString();
 
                 taskData_manager.log();
+                test_save_load();
+
 
 
             }
@@ -49,6 +51,11 @@ public class Input_Data_activity extends AppCompatActivity {
 
 
 
+    }
+
+    private void test_save_load() {
+        taskData_manager.data_save(this);
+        taskData_manager.data_Read(this);
     }
 
 }

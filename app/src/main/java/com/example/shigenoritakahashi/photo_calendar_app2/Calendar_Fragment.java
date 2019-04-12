@@ -65,6 +65,7 @@ public class Calendar_Fragment extends Fragment {
         int last_month_endday = get_last_month_endday();
         // 先月を取得してカレンダーがずれたので初期化
         calendar_init(ym.y, ym.m);
+        Log.e("check_Month","check==" + ym.m);
         //１日が何曜日を取得する
         int strat_day = get_C_daystart();
         //カレンダーの横列を取得する
@@ -94,7 +95,10 @@ public class Calendar_Fragment extends Fragment {
     }
 
     private int get_C_row(int start_day, int monthday) {
-        float row = (float) (start_day + monthday) / 7f;
+        float row = (float) (start_day - 1 + monthday) / 7f;
+        //Log.e("Test","staet_day=" + start_day
+               // + ":: monthday=" + monthday
+              // + "Math/cail=="+ (int) Math.ceil(row)) ;
         return (int) Math.ceil(row);
     }
 
