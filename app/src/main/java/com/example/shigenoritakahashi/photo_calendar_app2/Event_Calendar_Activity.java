@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Event_Calendar extends AppCompatActivity {
+public class Event_Calendar_Activity extends AppCompatActivity {
 
     private Calendar calendar;
     private ScrollView scrollView;

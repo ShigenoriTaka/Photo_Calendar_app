@@ -5,100 +5,131 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".App_tool" android:id="@+id/constraintLayout2">
+        tools:context=".App_tool"
+        android:id="@+id/constraintLayout2">
     <android.support.constraint.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="729dp"
-            android:id="@+id/calendarLayout_main"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0">
+            android:layout_height="632dp"
+            android:id="@+id/calendarLayout_background"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp" android:layout_marginEnd="6dp" android:layout_marginRight="6dp">
 
-        <TextView
-                android:text="TextView"
-                android:layout_width="80dp"
-                android:layout_height="38dp"
-                android:id="@+id/year_ID" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
-                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/month_day_ID" android:layout_marginEnd="202dp"
-                android:layout_marginRight="202dp"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="194dp"
-                android:layout_height="27dp"
-                android:id="@+id/month_ID"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/year_ID" android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="0dp"
-                android:layout_height="72dp"
-                android:id="@+id/month_day_ID" android:layout_marginTop="16dp"
-                app:layout_constraintStart_toEndOf="@+id/year_ID" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="27dp"
-                android:layout_marginRight="27dp"/>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="21dp"
-                android:id="@+id/linearLayout"
+        <ImageView
+                android:src="@drawable/backpphoto"
+                android:layout_width="398dp"
+                android:layout_height="253dp"
+                android:id="@+id/calendarView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        <TextView
+                android:text="Text"
+                android:layout_width="187dp"
+                android:layout_height="45dp"
+                android:id="@+id/month_ID"
+                android:layout_marginTop="136dp" app:layout_constraintTop_toBottomOf="@+id/year_ID"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-                app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/year_ID" android:layout_marginBottom="518dp">
-            <TextView
-                    android:text="San"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="1"
-                    android:layout_gravity="center_horizontal" android:gravity="center"
-                    android:textColor="@color/colorAccentSun"/>
-            <TextView
-                    android:text="Mon"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@android:color/background_light"/>
-            <TextView
-                    android:text="Tue"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView9" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@android:color/background_light"/>
-            <TextView
-                    android:text="Wen"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView7" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@android:color/background_light"/>
-            <TextView
-                    android:text="Thu"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView10" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@android:color/background_light"/>
-            <TextView
-                    android:text="Fri"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView8" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@android:color/background_light"/>
-            <TextView
-                    android:text="Sat"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"
-                    android:gravity="center" android:textColor="@color/colorAccentSat"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="vertical"
+                android:layout_marginStart="8dp" android:gravity="center_vertical"
+                android:textSize="18sp" android:textColor="@android:color/white"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="135dp"
+                android:layout_height="46dp"
+                android:id="@+id/year_ID" android:layout_marginTop="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                android:gravity="center_vertical" android:textSize="18sp"
+                android:textColor="@android:color/white"/>
+        <TextView
+                android:text="Text"
+                android:layout_width="76dp"
+                android:layout_height="69dp"
+                android:id="@+id/month_day_ID" android:textSize="24sp"
+                android:gravity="center_horizontal|center_vertical" app:layout_constraintStart_toEndOf="@+id/month_ID"
+                android:layout_marginStart="104dp" android:layout_marginLeft="104dp"
+                android:layout_marginTop="156dp" app:layout_constraintTop_toTopOf="@+id/calendarView"
+                android:textColor="@android:color/white"/>
+        <android.support.constraint.ConstraintLayout
                 android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:id="@+id/calendarLayout"
-                android:layout_marginBottom="313dp" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                app:layout_constraintVertical_bias="0.0">
-        </LinearLayout>
+                android:layout_height="381dp"
+                android:id="@+id/calendarBackcard"
+                app:layout_constraintTop_toBottomOf="@+id/year_ID" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                    android:src="@color/background_sakura"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+                    android:id="@+id/barkCard"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:id="@+id/linearLayout3" android:layout_marginTop="11dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="3dp" android:layout_marginRight="3dp"
+            >
+                <TextView
+                        android:text="San"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView16" android:layout_weight="1"
+                        android:textSize="16sp" android:textColor="@color/colorAccentSun"
+                        android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="Mon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView17" android:layout_weight="1"
+                        android:textColor="@android:color/white" android:textSize="16sp"
+                        android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="Tue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView18" android:layout_weight="1"
+                        android:textSize="16sp" android:textColor="@android:color/white"
+                        android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="Wen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView19" android:layout_weight="1"
+                        android:textColor="@android:color/white" android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="Thu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView20" android:layout_weight="1"
+                        android:textColor="@android:color/white" android:textSize="16sp"
+                        android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="Fri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView21" android:layout_weight="1"
+                        android:textColor="@android:color/white" android:textSize="16sp"
+                        android:gravity="center_horizontal|center_vertical"/>
+                <TextView
+                        android:text="San"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView22" android:layout_weight="1"
+                        android:textColor="@color/colorAccentSat" android:gravity="center_horizontal|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="340dp"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3" android:id="@+id/calendarLayout"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0">
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
