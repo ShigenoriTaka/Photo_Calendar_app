@@ -12,8 +12,7 @@ import android.widget.EditText;
 
 public class Input_Data_activity extends AppCompatActivity {
     public TaskData_manager taskData_manager = new TaskData_manager();
-    public Task_Data Task_Data_Box;
-
+    public int Task_Data_ID = -1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,20 +23,26 @@ public class Input_Data_activity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Task_Data task_data;
 
-                if (Task_Data_Box == null) {
-                    Task_Data_Box = new Task_Data();
-                    taskData_manager.add(Task_Data_Box);
+                //Task_Dataがない場合、新規保存する。
+                if (Task_Data_ID < 0) {
+                    task_data = new Task_Data();
+                    taskData_manager.add(task_data);
+                    Task_Data_ID = task_data.ID;
+                } else {
+                    //Task_Data_IDある場合、既存のデータを編集する。
+                    task_data = taskData_manager.get(Task_Data_ID);
                 }
 
 
-                EditText edit = (EditText)findViewById(R.id.eventtile);
+                EditText edit = (EditText)findViewById(R.id.eventtitle);
                 SpannableStringBuilder sb = (SpannableStringBuilder)edit.getText();
-                Task_Data_Box.Task_title = sb.toString();
+                task_data.Task_title = sb.toString();
 
                 edit = (EditText)findViewById(R.id.editMemo);
                 sb = (SpannableStringBuilder)edit.getText();
-                Task_Data_Box.Memo = sb.toString();
+                task_data.Memo = sb.toString();
 
                 taskData_manager.log();
                 test_save_load();
@@ -52,7 +57,6 @@ public class Input_Data_activity extends AppCompatActivity {
 
 
     }
-
     private void test_save_load() {
         taskData_manager.data_save(this);
         taskData_manager.data_Read(this);

@@ -18,10 +18,19 @@ public class TaskData_manager {
 
     public void add(Task_Data data){
 
-        data.ID = ID_NO;
-        ID_NO ++;
+        data.ID = data_List.size() + 1;
         data_List.add(data);
     }
+
+    public Task_Data get(int ID ) {
+        for (Task_Data data : data_List) {
+            if (data.ID == ID) {
+                return data;
+            }
+        }
+        return null;
+    }
+
 
     public void delete(Task_Data data){
         data_List.remove(data);

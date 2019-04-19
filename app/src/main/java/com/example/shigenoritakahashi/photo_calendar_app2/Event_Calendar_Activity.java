@@ -26,32 +26,21 @@ public class Event_Calendar_Activity extends AppCompatActivity {
         appToolEvent.init(
                 (TextView) findViewById(R.id.year_ID),
                 (TextView) findViewById(R.id.month_ID)
+
         );
+        Create_E_C_Prats();
 
 
+    }
 
-        int machParent = ViewGroup.LayoutParams.MATCH_PARENT;
-        int wrapContent = ViewGroup.LayoutParams.WRAP_CONTENT;
+    public void Create_E_C_Prats() {
+        Event_Calendar_Prats_View e_c_p = new Event_Calendar_Prats_View(this);
+        e_c_p.Set_schedule(2019,4,18);
+        LinearLayout e_s_linear = (LinearLayout) findViewById(R.id.event_scroll_linear);
 
-        ScrollView scrollView = new ScrollView(this);
-        scrollView.setLayoutParams(new ScrollView.LayoutParams(
-                machParent, wrapContent
-        ));
+        e_s_linear.addView(e_c_p);
 
 
-        //drawableの画像を設定する
-        ImageView imageView =new ImageView(this);
-
-        imageView.setImageResource(R.drawable.backpphoto);
-
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(
-                machParent, wrapContent));
-
-        //ScrollViewにViewを追加
-
-        scrollView.addView(imageView);
-
-        setContentView(scrollView);
 
     }
 }

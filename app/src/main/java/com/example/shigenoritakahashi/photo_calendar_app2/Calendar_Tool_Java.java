@@ -44,8 +44,18 @@ public class Calendar_Tool_Java extends AppCompatActivity {
 
         });
 
-       Test_03 a02 = new Test_03();
-       a02.a1();
+        findViewById(R.id.Event_Calendar_Button).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplication(), Event_Calendar_Activity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
 
 
 

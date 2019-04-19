@@ -17,7 +17,7 @@
             android:layout_marginStart="6dp" android:layout_marginEnd="6dp" android:layout_marginRight="6dp">
 
         <ImageView
-                android:src="@drawable/backpphoto"
+                android:src="@drawable/test_photo"
                 android:layout_width="398dp"
                 android:layout_height="253dp"
                 android:id="@+id/calendarView"
@@ -76,47 +76,47 @@
                     android:layout_height="28dp"
                     android:id="@+id/linearLayout3" android:layout_marginTop="11dp"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp" android:layout_marginEnd="3dp" android:layout_marginRight="3dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp" android:layout_marginEnd="3dp" android:layout_marginRight="3dp"
             >
                 <TextView
                         android:text="San"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView16" android:layout_weight="1"
                         android:textSize="16sp" android:textColor="@color/colorAccentSun"
                         android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="Mon"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView17" android:layout_weight="1"
                         android:textColor="@android:color/white" android:textSize="16sp"
                         android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="Tue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView18" android:layout_weight="1"
                         android:textSize="16sp" android:textColor="@android:color/white"
                         android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="Wen"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView19" android:layout_weight="1"
                         android:textColor="@android:color/white" android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="Thu"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView20" android:layout_weight="1"
                         android:textColor="@android:color/white" android:textSize="16sp"
                         android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="Fri"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView21" android:layout_weight="1"
                         android:textColor="@android:color/white" android:textSize="16sp"
                         android:gravity="center_horizontal|center_vertical"/>
                 <TextView
                         android:text="San"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content" android:id="@+id/textView22" android:layout_weight="1"
                         android:textColor="@color/colorAccentSat" android:gravity="center_horizontal|center_vertical"/>
             </LinearLayout>
